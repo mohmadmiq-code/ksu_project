@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KSU • STAT 102 • Lesson 3.1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+  <header class="ksu-header">
+    <div class="ksu-bar"></div>
+    <div class="ksu-wrap">
+      <div class="ksu-brand">
+        <div class="ksu-mark" aria-hidden="true"></div>
+        <div class="ksu-titles">
+          <div class="ar">جامعة الملك سعود</div>
+          <div class="en">King Saud University</div>
+          <div class="sub">
+            <span class="en">First‑Year Common Program</span>
+            <span class="sep">|</span>
+            <span class="ar">السنة الأولى المشتركة</span>
+          </div>
+        </div>
+      </div>
+      <div class="ai-badge" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="38" height="38" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 10c-7 0-12 5-12 12 0 3 1 5 3 7-2 2-3 4-3 7 0 7 5 12 12 12h4v-8h-4c-3 0-4-2-4-4s1-4 4-4h4v-8h-4c-3 0-4-2-4-4s1-4 4-4h4v-8h-4z" fill="currentColor" opacity=".9"/>
+          <path d="M40 10h-4v8h4c3 0 4 2 4 4s-1 4-4 4h-4v8h4c3 0 4 2 4 4s-1 4-4 4h-4v8h4c7 0 12-5 12-12 0-3-1-5-3-7 2-2 3-4 3-7 0-7-5-12-12-12z" fill="currentColor" opacity=".9"/>
+          <path d="M22 32h20" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+          <path d="M32 22v20" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+        </svg>
+      </div>
+      <div class="ksu-lesson">
+        <div class="lesson-top">STAT 102</div>
+        <div class="lesson-main">Lesson 3.1</div>
+        <div class="lesson-sub">Organizing and Representing Raw Data</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="shell">
+      <div class="chat-card">
+        <div class="chat-head">
+          <div class="chip">درس 3.1</div>
+          <div class="status" id="statusDot">
+            <span class="dot" aria-hidden="true"></span>
+            <span id="statusText">متصل</span>
+          </div>
+        </div>
+
+        <div class="chat-body" id="chatBody" aria-live="polite"></div>
+
+        <div class="chat-tools">
+          <button class="tool" id="btnMic" type="button" title="تحدث">
+            <span class="icon">🎙️</span>
+            <span>تحدث</span>
+          </button>
+	          <label class="tool" title="اختر مستوى الشرح">
+	            <span class="icon">🧠</span>
+	            <select id="modeSelect" class="select" aria-label="مستوى الشرح">
+	              <option value="auto" selected>تلقائي</option>
+	              <option value="a">A: مطابق للكتاب</option>
+	              <option value="b">B: شرح مبسّط</option>
+	              <option value="ab">A+B: كامل</option>
+	            </select>
+	          </label>
+          <label class="tool tool-check" title="قراءة الجواب بصوت">
+            <input id="ttsToggle" type="checkbox" checked />
+            <span class="icon">🔊</span>
+            <span>قراءة الجواب</span>
+          </label>
+          <button class="tool" id="btnClear" type="button" title="مسح المحادثة">
+            <span class="icon">🧹</span>
+            <span>مسح</span>
+          </button>
+        </div>
+
+        <form class="chat-input" id="chatForm">
+          <textarea id="q" rows="2" placeholder="اكتب سؤالك هنا… (مثال: ما مزايا المتوسط الحسابي؟)"></textarea>
+          <button id="send" type="submit">إرسال</button>
+        </form>
+
+        <div class="hint">
+          يتم الرد ضمن نطاق درس 3.1 فقط.
+        </div>
+      </div>
+
+      <aside class="side-card">
+        <div class="side-title">أدوات سريعة</div>
+        <button class="quick" data-q="ما تعريف المتوسط الحسابي؟">تعريف المتوسط</button>
+        <button class="quick" data-q="ما مزايا المتوسط الحسابي؟">مزايا المتوسط</button>
+        <button class="quick" data-q="ما عيوب المتوسط الحسابي؟">عيوب المتوسط</button>
+        <button class="quick" data-q="كيف أحسب الوسيط؟">حساب الوسيط</button>
+        <button class="quick" data-q="كيف أحسب المتوسط الموزون؟">المتوسط الموزون</button>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-wrap">
+      <span>KSU • STAT 102 • Lesson 3.1</span>
+      <span class="sep">•</span>
+      <span class="muted">واجهة ويب تفاعلية</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
